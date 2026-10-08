@@ -1,0 +1,15 @@
+{
+  "name": "kinopark",
+  "version": "1.0.0",
+  "description": "КиноПарк — система покупки билетов и выбора мест для сети кинотеатров",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --no-warnings server/index.js",
+    "dev": "node --no-warnings --watch server/index.js",
+    "reset-db": "node --no-warnings server/reset.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}

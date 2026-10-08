@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор мест — КиноПарк</title>
+    <link rel="icon" href="/img/favicon.svg">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header" id="site-header"></header>
+
+    <main class="container">
+        <a class="back-link" id="back" href="/">← К расписанию</a>
+        <div id="session-bar"></div>
+
+        <div class="booking-layout">
+            <section class="card hall-card">
+                <div class="screen"><div class="screen-arc"></div><span>Экран</span></div>
+                <div class="map-scroll"><div class="seat-map" id="seat-map"></div></div>
+                <div class="legend" id="legend"></div>
+            </section>
+
+            <aside class="card summary">
+                <div class="card-title"><span>Ваши места</span><span class="chip blue" id="sel-count">0</span></div>
+                <div id="sel-box"></div>
+                <div class="total-row"><span>Итого</span><strong id="total">0 ₽</strong></div>
+                <button class="btn btn-primary btn-lg btn-block" id="next" disabled>Перейти к оплате</button>
+                <div class="price-factors" id="factors"></div>
+            </aside>
+        </div>
+    </main>
+
+    <div class="seat-tip hidden" id="tip"></div>
+    <footer class="footer" id="site-footer"></footer>
+    <script type="module" src="/js/seats.js"></script>
+</body>
+</html>

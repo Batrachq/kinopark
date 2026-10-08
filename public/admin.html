@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админка — КиноПарк</title>
+    <link rel="icon" href="/img/favicon.svg">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header" id="site-header"></header>
+
+    <main class="container" style="margin-bottom:50px">
+        <div class="page-head"><h1>Панель администратора</h1><p>Продажи, афиша, расписание и контроль на входе</p></div>
+        <div class="tabs" id="tabs">
+            <button class="btn-filter active" data-tab="stats">Обзор</button>
+            <button class="btn-filter" data-tab="sessions">Сеансы</button>
+            <button class="btn-filter" data-tab="movies">Фильмы</button>
+            <button class="btn-filter" data-tab="check">Проверка билетов</button>
+        </div>
+        <div id="panel"></div>
+    </main>
+
+    <footer class="footer" id="site-footer"></footer>
+    <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

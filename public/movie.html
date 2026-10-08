@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильм — КиноПарк</title>
+    <link rel="icon" href="/img/favicon.svg">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header" id="site-header"></header>
+
+    <main class="container">
+        <a class="back-link" href="/">← Вся афиша</a>
+        <section id="movie"></section>
+
+        <section id="schedule" style="margin-bottom:50px">
+            <div class="section-title">
+                <span>Расписание сеансов</span>
+                <select class="select" id="cinema-select" aria-label="Кинотеатр"><option value="">Все кинотеатры</option></select>
+            </div>
+            <div class="date-tabs" id="date-tabs"></div>
+            <div id="sessions"></div>
+        </section>
+    </main>
+
+    <footer class="footer" id="site-footer"></footer>
+    <script type="module" src="/js/movie.js"></script>
+</body>
+</html>

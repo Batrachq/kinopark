@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата — КиноПарк</title>
+    <link rel="icon" href="/img/favicon.svg">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header" id="site-header"></header>
+
+    <main class="container" id="main">
+        <button class="back-link" id="back" style="border:none;background:none;cursor:pointer">← Изменить места</button>
+        <div class="page-head" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+            <div><h1>Оформление заказа</h1><p>Места забронированы за вами — успейте оплатить</p></div>
+            <span class="timer" id="timer"></span>
+        </div>
+
+        <div class="booking-layout">
+            <div>
+                <section class="card">
+                    <div class="card-title">Бар без очереди</div>
+                    <p class="muted" style="margin:-8px 0 16px;font-size:14px">Закажите заранее — заберёте на стойке выдачи по QR-коду билета</p>
+                    <div class="snacks-grid" id="snacks"></div>
+                </section>
+
+                <section class="card">
+                    <div class="card-title">Оплата картой</div>
+                    <div class="test-note">Учебный проект: деньги не списываются, номер карты не сохраняется.
+                        Тестовая карта: <code id="test-card" title="Подставить">4242 4242 4242 4242</code></div>
+                    <div class="bank-card" aria-hidden="true">
+                        <div class="bc-chip"></div>
+                        <div class="bc-num" id="bc-num">•••• •••• •••• ••••</div>
+                        <div class="bc-bottom"><span id="bc-holder">Имя владельца</span><span id="bc-exp">ММ/ГГ</span></div>
+                    </div>
+                    <form id="pay-form" class="form-grid" novalidate>
+                        <div class="field full"><label for="card">Номер карты</label>
+                            <input id="card" name="number" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" maxlength="19" required></div>
+                        <div class="field"><label for="exp">Срок действия</label>
+                            <input id="exp" name="exp" inputmode="numeric" autocomplete="cc-exp" placeholder="ММ/ГГ" maxlength="5" required></div>
+                        <div class="field"><label for="cvc">CVC</label>
+                            <input id="cvc" name="cvc" inputmode="numeric" autocomplete="cc-csc" placeholder="•••" maxlength="3" type="password" required></div>
+                        <div class="field full"><label for="holder">Имя на карте</label>
+                            <input id="holder" name="holder" autocomplete="cc-name" placeholder="IVAN IVANOV"></div>
+                        <div class="form-error full hidden" id="pay-error"></div>
+                    </form>
+                </section>
+            </div>
+
+            <aside class="card summary" id="summary"></aside>
+        </div>
+    </main>
+
+    <footer class="footer" id="site-footer"></footer>
+    <script type="module" src="/js/checkout.js"></script>
+</body>
+</html>

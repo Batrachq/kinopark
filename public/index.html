@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КиноПарк — Билеты в кино</title>
+    <link rel="icon" href="/img/favicon.svg">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Шапка сайта (рисуется из js/common.js) -->
+    <header class="header" id="site-header"></header>
+
+    <!-- Баннер -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-banner">
+                <p class="hero-subtitle">Добро пожаловать</p>
+                <h1>Выберите фильм и забронируйте место</h1>
+                <div class="hero-features">
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 20h1"/></svg>Электронный билет с QR — проходите сразу в зал</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 17 6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>Ранний билет дешевле</span>
+                    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9 8 21h8l2-12"/><path d="M5 9h14"/></svg>Попкорн без очереди</span>
+                </div>
+                <!-- Декоративные линии как на макете -->
+                <div class="hero-decoration"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Фильтры -->
+    <section class="filters-section container">
+        <div class="filters-top">
+            <div class="time-filters">
+                <button class="btn-filter active" data-time="now">Сейчас в кино</button>
+                <button class="btn-filter" data-time="soon">Скоро</button>
+            </div>
+            <div class="filters-right">
+                <input class="search-input" id="search" type="search" placeholder="Поиск фильма" aria-label="Поиск фильма">
+                <select class="select" id="cinema-select" aria-label="Кинотеатр">
+                    <option value="">Все кинотеатры</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="genre-filters" id="genre-filters">
+            <!-- Кнопки жанров добавляются из базы данных -->
+        </div>
+    </section>
+
+    <!-- Сетка фильмов -->
+    <main class="container">
+        <div class="movies-grid" id="movies-grid"></div>
+    </main>
+
+    <footer class="footer" id="site-footer"></footer>
+
+    <script type="module" src="/js/index.js"></script>
+</body>
+</html>
